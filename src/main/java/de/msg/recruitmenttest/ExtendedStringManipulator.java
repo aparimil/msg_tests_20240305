@@ -2,7 +2,7 @@ package main.java.de.msg.recruitmenttest;
 
 import java.util.List;
 
-public class ExtentedStringManipulator extends StringManipulator {
+public class ExtendedStringManipulator extends StringManipulator {
 
     // Task 1.2.1
     // Write a method that concatenates two strings and removes any duplicate characters.
