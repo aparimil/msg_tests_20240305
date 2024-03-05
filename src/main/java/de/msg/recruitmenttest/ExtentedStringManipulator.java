@@ -1,4 +1,4 @@
-package main.java.de.msg.test;
+package main.java.de.msg.recruitmenttest;
 
 import java.util.List;
 
