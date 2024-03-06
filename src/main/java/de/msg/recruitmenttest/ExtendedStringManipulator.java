@@ -1,21 +1,38 @@
 package main.java.de.msg.recruitmenttest;
 
-import java.util.List;
+import java.util.*;
 
 public class ExtendedStringManipulator extends StringManipulator {
 
     // Task 1.2.1
     // Write a method that concatenates two strings and removes any duplicate characters.
     public String concatenateAndRemoveDuplicates(String str1, String str2) {
-        // TODO: Implement the logic to concatenate and remove duplicates
-        return null;
+        String concatenatedString = str1 + str2;
+        Set<Character> uniqueCharacters = new HashSet<>();
+        StringBuilder result = new StringBuilder();
+        for (char ch : concatenatedString.toCharArray()) {
+            if (uniqueCharacters.add(ch)) {
+                result.append(ch);
+            }
+        }
+
+        return result.toString();
     }
 
     // Task 1.2.2
     // Write a method that finds all occurrences of a substring in a given string.
     // Return the indices where the substring starts.
     public List<Integer> findAllSubstringOccurrences(String input, String substring) {
-        // TODO: Implement the logic to find all occurrences of the substring
-        return null;
+        List<Integer> occurrences = new ArrayList<>();
+        if (input == null || substring == null || substring.isEmpty()) {
+            return occurrences;
+        }
+
+        int index = input.indexOf(substring);
+        while (index != -1) {
+            occurrences.add(index);
+            index = input.indexOf(substring, index + 1);
+        }
+        return occurrences;
     }
 }
